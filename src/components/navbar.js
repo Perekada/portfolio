@@ -31,8 +31,8 @@ const Navbar = () => {
   return (
 		<nav className='nav-conatiner'>
 			<div className='logo'>
-				<UilEnvelopes style={{ marginTop: '5px' }} />
-				<NavLink onClick={handleConact}>joelkada16@gmail.com</NavLink>
+				<UilEnvelopes style={{ marginRight: '7px' }} />
+				<NavLink onClick={handleConact}>  joelkada16@gmail.com</NavLink>
 			</div>
 			<ul className={active}>
 				<li>

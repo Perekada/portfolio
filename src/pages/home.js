@@ -26,8 +26,7 @@ const Home = () => {
 				</h2>
 				<p>
 					{' '}
-					My full name is Joel Oyinperebo Kada, I am from Bayelsa state, but I
-					was born and brought up in the city of Lagos.
+					My full name is Joel Oyinperebo Kada, I am from Bayelsa state.
 				</p>
 				<p>
 					{' '}

@@ -83,6 +83,11 @@ nav.nav-conatiner {
 	}
 }
 
+.logo{
+	display: flex;
+	align-items: center;
+}
+
 .icon {
 	width: 3rem;
 	height: 2rem;
@@ -223,8 +228,8 @@ li {
 
 /* Skills */
 .about-skills {
-	background-color: #313131;
-	border: 1px solid #313131;
+	background-color: whitesmoke;
+	border: 1px solid whitesmoke;
 	height: 10px;
 	list-style: none;
 }
@@ -232,48 +237,48 @@ li {
 .about-skills-html {
 	width: 0;
 	height: 100%;
-	background-color: hwb(0 100% 0%);
+	background-color:#313131;
 	animation: html 5.5s linear forwards;
 }
 
 .about-skills-css {
 	width: 0;
 	height: 100%;
-	background-color: white;
+	background-color: #313131;
 	animation: css 5.5s linear forwards;
 }
 
 .about-skills-javascripts {
 	width: 0;
 	height: 100%;
-	background-color: white;
+	background-color: #313131;
 	animation: javascripts 5.5s linear forwards;
 }
 
 .about-skills-react {
 	width: 0;
 	height: 100%;
-	background-color: white;
+	background-color: #313131;
 	animation: react 5.5s linear forwards;
 }
 
 .about-skills-figma {
 	width: 0;
 	height: 100%;
-	background-color: white;
+	background-color: #313131;
 	animation: figma 5.5s linear forwards;
 }
 .about-skills-php {
 	width: 0;
 	height: 100%;
-	background-color: white;
+	background-color: #313131;
 	animation: php 5.5s linear forwards;
 }
 
 .about-skills-mysql {
 	width: 0;
 	height: 100%;
-	background-color: white;
+	background-color: #313131;
 	animation: mysql 5.5s linear forwards;
 }
 
