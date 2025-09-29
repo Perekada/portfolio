@@ -32,7 +32,7 @@ const Home = () => {
 					{' '}
 					I studied computer science in the University of Benin. I have always
 					had a passion for computers, technology and I have always been
-					capitvated by the puruit of knowledge.
+					capitvated by the pursuit of knowledge.
 				</p>
 				<p>
 					{' '}
@@ -47,14 +47,14 @@ const Home = () => {
 					Python. By my first <b> "Hello World " </b>console log, I knew I had
 					found my passion in life and I was sure I would do whatever i needed
 					to to follow this passion. I am a self taught programmer (Yes, that
-					means youtube videos😉) with 4 years of experience in frontend web
+					means youtube videos😉) with 7 years of experience in frontend web
 					development.
 				</p>
 				<p>
 					{' '}
 					<b> My goal ?</b> <br /> To keep refining my skills, staying updated
 					with the latest tech, and collaborating with companies and individuals
-					to brng their ideas to life on the web.
+					to bring their ideas to life on the web.
 				</p>
 			</section>
 			<section
