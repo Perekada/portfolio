@@ -1,8 +1,8 @@
-import React from 'react'
-import { projects } from '../components/workData'
+import React from 'react';
+import { projects } from '../../my-app/app/components/workData';
 
 const works = () => {
-  return (
+	return (
 		<div className='works'>
 			<div className='projects'>
 				{projects.map((project) => {
@@ -25,6 +25,6 @@ const works = () => {
 			</div>
 		</div>
 	);
-}
+};
 
-export default works
+export default works;

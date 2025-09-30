@@ -1,21 +1,21 @@
-import React from 'react'
-import image from '../assets/image.jpg'
-import LoadingBars from '../components/loadingBars';
+'use client'
+import React from 'react';
+import image from '../assets/image.jpg';
+// import LoadingBars from '../../my-app/app/components/loadingBars';
 import { useGlobal } from '../Context';
-import { projects } from '../components/workData';
+import { projects } from '../../my-app/app/components/workData';
 import { NavLink } from 'react-router-dom';
 
-
 const Home = () => {
-	const { openModal} = useGlobal();
-	const projectList = projects.slice(0, 2)
-  return (
+	const { openModal } = useGlobal();
+	const projectList = projects.slice(0, 2);
+	return (
 		<div className='home overlay'>
 			<section className='img-container'>
 				<img
 					src={image}
 					alt=''
-					className='image'
+					className='rounded-2xl'
 				/>
 			</section>
 			<section className='description'>
@@ -24,10 +24,7 @@ const Home = () => {
 					Software Engineer React and Web developer. <br />
 					Bringing Your Ideas to Reality
 				</h2>
-				<p>
-					{' '}
-					My full name is Joel Oyinperebo Kada, I am from Bayelsa state.
-				</p>
+				<p> My full name is Joel Oyinperebo Kada, I am from Bayelsa state.</p>
 				<p>
 					{' '}
 					I studied computer science in the University of Benin. I have always
@@ -72,7 +69,7 @@ const Home = () => {
 								key={id}
 								className='project glass'>
 								<img
-									src={require(`../assets/${img}`)}
+									src={`../assets/${img}`}
 									alt=''
 									className='project_img'
 								/>
@@ -100,6 +97,6 @@ const Home = () => {
 			</section>
 		</div>
 	);
-}
+};
 
-export default Home
+export default Home;

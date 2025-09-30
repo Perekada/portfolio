@@ -1,14 +1,12 @@
+'use client'
 import React, {useState} from 'react'
-import { NavLink } from 'react-router-dom'
-import Contact from './Contact';
-import Resume from './Resume';
-import { useGlobal } from '../Context';
 import { UilEnvelopes } from '@iconscout/react-unicons';
 import { UilDraggabledots } from '@iconscout/react-unicons';
+import { Link } from 'next/navigation';
 import '../App.css'
 
 const Navbar = () => {
-	const { isOpen, openModal, openResume, openPop } = useGlobal();
+	// const { isOpen, openModal, openResume, openPop } = useGlobal();
     const [active, setActive] = useState('nav__menu');
     const [toggleIcon, setToggleIcon] = useState('nav__toggler')
      const navToggle = () => {
@@ -21,48 +19,48 @@ const Navbar = () => {
 					: setToggleIcon('nav__toggler');
 			};
 
-	const handleConact = (e) =>{
-		e.preventDefault()
+	// const handleConact = (e) =>{
+	// 	e.preventDefault()
 
-		openModal()
-		return 
-	}
+	// 	openModal()
+	// 	return 
+	// }
 
   return (
 		<nav className='nav-conatiner'>
 			<div className='logo'>
 				<UilEnvelopes style={{ marginRight: '7px' }} />
-				<NavLink onClick={handleConact}>  joelkada16@gmail.com</NavLink>
+				{/* <Link href='/'>  joelkada16@gmail.com</Link> */}
 			</div>
 			<ul className={active}>
 				<li>
-					<NavLink
-						to='/'
+					{/* <Link
+						href='/'
 						onClick={() => setActive('nav__menu')}>
 						Home
-					</NavLink>
+					</Link> */}
 				</li>
 				<li>
-					<NavLink
-						to=''
+					{/* <Link
+						href=''
 						onClick={(e) => { e.preventDefault()
 							openPop()}}>
 						Resume
-					</NavLink>
+					</Link> */}
 				</li>
 				<li>
-					<NavLink
-						to='/works'
+					{/* <Link
+						href='/'
 						onClick={() => setActive('nav__menu')}>
 						Works
-					</NavLink>
+					</Link> */}
 				</li>
 				<li>
-					<NavLink to='' onClick={handleConact} >Contact</NavLink>
+					{/* <Link href='' >Contact</Link> */}
 				</li>
 			</ul>
-			{isOpen && (<Contact/>)}
-			{openResume && (<Resume/>)}
+			{/* {isOpen && (<Contact/>)}
+			{openResume && (<Resume/>)} */}
 			<div
 				onClick={navToggle}
 				className={toggleIcon}>

@@ -2,6 +2,8 @@ import React, {useRef, useState} from 'react'
 import { useGlobal } from '../Context';
 import { UilWhatsapp } from '@iconscout/react-unicons';
 import emailjs from '@emailjs/browser'
+import { Label } from '@/components/ui/label';
+
 
 const Contact = () => {
 
@@ -55,7 +57,8 @@ const Contact = () => {
 							action=''
 							onSubmit={handleAccept}>
 							<section className='form-group'>
-								<label htmlFor='Name'>Name</label>
+								{/* <label htmlFor='Name'>Name</label> */}
+								<Label htmlFor='Name'>Name</Label>
 								<input
 									type='text'
 									name='Name'
