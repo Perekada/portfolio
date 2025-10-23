@@ -1,5 +1,5 @@
 import React from 'react';
-import image from './assets/image.jpg';
+import image from '@/public/assets/image.jpg';
 import Image from "next/image";
 import './App.css'
 import LoadingBars from "@/app/components/loadingBars"; // Adjust path as needed
@@ -44,7 +44,7 @@ export default function Home() {
             <p>
               {' '}
               But I wasn't truly hooked until I picked up Javascript and Django with
-              Python. By my first <b> "Hello World " </b>console log, I knew I had
+              Python. By my first <b> "Hello World " </b> console log, I knew I had
               found my passion in life and I was sure I would do whatever i needed
               to to follow this passion. I am a self taught programmer (Yes, that
               means youtube videos😉) with 7 years of experience in frontend web
@@ -71,10 +71,12 @@ export default function Home() {
 									<div
 										key={id}
 										className='project glass'>
-										<img
-											src={`./assets/${img}`}
+										<Image
+											src={`/assets/${img}`}
 											alt=''
 											className='project_img'
+                      width={100}
+                      height={100}
 										/>
 										<h4>
 											<a href={url}>{text}</a>

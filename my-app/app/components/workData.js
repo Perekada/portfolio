@@ -1,4 +1,4 @@
-import '../assets/FAQ.png'
+
 
 export const projects = [
 	{
