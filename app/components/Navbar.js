@@ -31,7 +31,7 @@ export const Navbar = () => {
 		<div>
 			<nav className='nav-conatiner p-4'>
 				<div className='logo'>
-					<a href='mailto:joelkada16@gmail.com' className='flex items-center'> 
+					<a href='mailto:joelkada16@gmail.com' className='flex items-center family--font-nunito'> 
 						<UilEnvelopes style={{ marginRight: '7px' }} />
 						joelkada16@gmail.com
 					</a>
@@ -39,9 +39,9 @@ export const Navbar = () => {
 				<div>
 					<Link href='/' className='nav__brand'>
 					<Image  src={'/FullLogo.png'}
-					width={180}
+					width={150}
 					alt='logo'
-					height={180}/>
+					height={150}/>
 					</Link>
 				</div>
 				<ul className={active}>
