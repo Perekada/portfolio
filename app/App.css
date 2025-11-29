@@ -46,22 +46,16 @@ Global Styles
 ===============
 */
 
-*,
-::after,
-::before {
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-}
 
-a ::before,
+
+/* a ::before,
 ::after {
     color: var(--clr-grey-1);
-}
+} */
 
 body {
     background-size: cover;
-    color: var(--clr-grey-1);
+    /* color: var(--clr-grey-1); */
     line-height: 1.5;
     font-size: 0.875rem;
 }
@@ -178,11 +172,11 @@ Route {
 /* 
 Navbar
 */
-nav {
+/* nav {
     background: rgb(237, 240, 246);
     background-size: cover;
     width: max-content;
-}
+} */
 
 nav.nav-conatiner {
     width: 100%;

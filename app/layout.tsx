@@ -37,7 +37,9 @@ export default function RootLayout({
 				className={`${Playwrite_NZ_Font.variable} ${nunito.className} ${Playwrite.className}`}>
 				<AppProvider>
 					<Navbar />
+					<div className='mt-40'>
 					{children}
+					</div>
 					<Footer />
 				</AppProvider>
 			</body>

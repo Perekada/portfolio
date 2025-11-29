@@ -29,19 +29,25 @@ export const Navbar = () => {
 
 	return (
 		<div>
-			<nav className='nav-conatiner p-4'>
+			<nav className='fixed top-0 w-[100%] z-[1000] flex h-[8vh] items-center justify-between p-10 bg-[#140152]'>
 				<div className='logo'>
-					<a href='mailto:joelkada16@gmail.com' className='flex items-center family--font-nunito'> 
-						<UilEnvelopes style={{ marginRight: '7px' }} />
+					<a
+						href='mailto:joelkada16@gmail.com'
+						className='flex items-center family--font-nunito'>
+						<UilEnvelopes className='mr-[12px]' />
 						joelkada16@gmail.com
 					</a>
 				</div>
 				<div>
-					<Link href='/' className='nav__brand'>
-					<Image  src={'/FullLogo.png'}
-					width={150}
-					alt='logo'
-					height={150}/>
+					<Link
+						href='/'
+						className='nav__brand'>
+						<Image
+							src={'/FullLogo.png'}
+							width={150}
+							alt='logo'
+							height={150}
+						/>
 					</Link>
 				</div>
 				<ul className={active}>
@@ -54,11 +60,13 @@ export const Navbar = () => {
 					</li>
 					<li>
 						<Link
-						href=''
-						onClick={(e) => { e.preventDefault()
-							openPop()}}>
+							href=''
+							onClick={(e) => {
+								e.preventDefault();
+								openPop();
+							}}>
 							Resume
-							</Link>
+						</Link>
 					</li>
 					<li>
 						<Link
@@ -67,7 +75,9 @@ export const Navbar = () => {
 							Works
 						</Link>
 					</li>
-					<li><Link href='' >Contact</Link></li>
+					<li>
+						<Link href=''>Contact</Link>
+					</li>
 				</ul>
 				{/* {isOpen && (<Contact/>)}
 			{openResume && (<Resume/>)} */}

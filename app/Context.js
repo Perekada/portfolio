@@ -6,6 +6,7 @@ const AppContext = React.createContext();
 export const AppProvider = ({ children }) => {
 	const [isOpen, setIsopen] = useState(false);
 	const [openResume, setOpenResume] = useState(false);
+	const [active, setActive] = useState(false);
 
 	const openModal = () => {
 		setIsopen(true);
@@ -38,6 +39,8 @@ export const AppProvider = ({ children }) => {
 				openPop,
 				closePop,
 				setOpenResume,
+				active,
+				setActive,
 			}}>
 			{children}
 		</AppContext.Provider>
