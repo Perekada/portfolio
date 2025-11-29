@@ -12,7 +12,7 @@ const Footer = () => {
 		<>
 			<footer
 				style={{}}
-				className='grid grid-flow-row grid-cols-2 grid-rows-2 gap-4  items-center p-5   bg-[#04052E] h-[260px] mt-24'>
+				className='grid grid-flow-row grid-cols-2 grid-rows-2 gap-4  items-center p-5   bg-[#04052E] h-[260px] mt-4'>
 				<div className='m-12'>
 					<img
 						src='/FullLogo.png'
@@ -21,6 +21,9 @@ const Footer = () => {
 						height={180}
 						className='ml-12'
 					/>
+				</div>
+				<div className='absolute justify-center  text-center ml-[220px] self-center'>
+					<h4>I can do all things through Christ who strengthens me</h4>
 				</div>
 				<div className='grid grid-flow-col gap-10 mr-0 ml-12 justify-center'>
 					<a
@@ -57,6 +60,7 @@ const Footer = () => {
 						/>
 					</a>
 				</div>
+
 				<div>
 					<h4 className=' ml-12'>@2024 Pere Kada. All rights reserved</h4>
 				</div>
