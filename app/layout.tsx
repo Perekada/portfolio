@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar';
 import Footer from './components/Footer';
 import './globals.css';
 import { AppProvider } from './Context';
+import PageTransition from './components/PageTransition';
 
 const Playwrite = localFont({
 	src: '/fonts/PlaywriteNZGuides-Regular.ttf',
@@ -37,9 +38,11 @@ export default function RootLayout({
 				className={`${Playwrite_NZ_Font.variable} ${nunito.className} ${Playwrite.className}`}>
 				<AppProvider>
 					<Navbar />
+					<PageTransition>
 					<div className='mt-40'>
 					{children}
 					</div>
+					</PageTransition>
 					<Footer />
 				</AppProvider>
 			</body>

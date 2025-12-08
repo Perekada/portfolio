@@ -17,7 +17,7 @@ const PageTransition = ({ children }: { children: ReactNode }) => {
 				initial='hidden'
 				animate='enter'
 				exit='exit'
-				transition={{ type: 'tween', duration: 0.8 }}
+				transition={{ type: 'tween', duration: 1 }}
                 className='min-h-screen'>
 				{children}
 			</motion.div>

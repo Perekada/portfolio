@@ -9,12 +9,20 @@ import { projects } from './workData';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { motion } from 'framer-motion';
 
 export default function Home() {
 	// const { openModal } = useGlobal();
 	const { active, setActive } = useGlobal();
 	const projectList = projects.slice(0, 2);
 	return (
+		<motion.main
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      
+    >
+
 		<div className=' mt-16 flex flex-col items-center'>
 			<section className='img-container'>
 				<Image
@@ -87,7 +95,7 @@ export default function Home() {
 					justifyContent: 'space-between',
 					gap: '2rem',
 				}}>
-				<span>
+				<div>
 					{projectList.map((project: any) => {
 						const { id, img, text, url } = project;
 						return (
@@ -110,14 +118,14 @@ export default function Home() {
 					<button className='more-btn'>
 						<Link href='works'>More Projects..</Link>
 					</button>
-				</span>
+				</div>
 				<Separator
 					orientation='vertical'
 					className='h-[880px] w-1 bg-[#9395D3]'
 				/>
-				<span>
+				<div className='w-[50%]'>
 					<LoadingBars />
-				</span>
+				</div>
 			</section>
 			<section>
 				<Button
@@ -130,5 +138,6 @@ export default function Home() {
 				</Button>
 			</section>
 		</div>
+					</motion.main>
 	);
 }

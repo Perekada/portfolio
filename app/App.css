@@ -410,19 +410,7 @@ li {
 
 
 /* Skills */
-.about-skills {
-    background-color: whitesmoke;
-    border: 1px solid whitesmoke;
-    height: 10px;
-    list-style: none;
-}
 
-.about-skills-html {
-    width: 0;
-    height: 100%;
-    background-color: #313131;
-    animation: html 5.5s linear forwards;
-}
 
 .about-skills-css {
     width: 0;
@@ -480,7 +468,7 @@ li {
 
 @keyframes javascripts {
     100% {
-        width: 75%;
+        width: 90%;
     }
 }
 
