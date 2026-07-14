@@ -85,7 +85,7 @@ export default function Home() {
 				)}
 			</div>
 			<Separator
-				className='my-8 h-2 bg-[#9395D3]'
+				className='my-8 h-0.5 bg-[#9395D3]'
 				color='#9395D3'
 			/>
 			<section

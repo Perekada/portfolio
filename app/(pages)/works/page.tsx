@@ -8,10 +8,11 @@ import {
 
 const page = () => {
   return (
-    <div>
-      Works Page
-    </div>
-  )
+		<div>
+			<div className='project glass'></div>
+			Works Page
+		</div>
+	);
 }
 
 export default page
