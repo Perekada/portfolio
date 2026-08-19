@@ -1,0 +1,15 @@
+GitHub Copilot
+To fetch repository details from your Netlify account, you need to use the Netlify API. Here's how you can proceed:
+
+Generate a Netlify Personal Access Token:
+
+Log in to your Netlify account.
+Go to User Settings > Applications > Personal Access Tokens.
+Generate a new token and copy it.
+Set the Token in Your .env File: Add the following to your .env file:
+
+Fetch Repository Details: Use the Netlify API to fetch repository details. The endpoint to list sites is:
+
+You can use the NETLIFY_TOKEN for authentication.
+
+Would you like me to implement the API call in your project? If yes, let me know where you'd like the code to be added.
