@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-// @ts-expect-error CSS imports are handled by the Next.js bundler.
 import '../../App.css';
 import {
 	HoverCard,
@@ -14,18 +13,12 @@ const page = () => {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const token = 'GITHUB_TOKEN';
-			const response = await fetch('https://api.github.com/user/repos', {
-				headers: {
-					Authorization: `token ${token}`,
-				},
-			});
+			const response = await fetch('/api/repos');
 			if (response.ok) {
 				const data = await response.json();
 				setRepos(data);
-				console.log(data);
 			} else {
-				console.error('Failed to fetch repositories');
+				console.error('Failed to fetch repositories', await response.json());
 			}
 		};
 		fetchData();
