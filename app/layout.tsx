@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import { Navbar } from './components/Navbar';
 import Footer from './components/Footer';
 import './globals.css';
+import './App.css';
 import { AppProvider } from './Context';
 import PageTransition from './components/PageTransition';
 
