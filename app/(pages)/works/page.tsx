@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+// @ts-expect-error CSS imports are handled by the Next.js bundler.
 import '../../App.css';
 import {
 	HoverCard,
