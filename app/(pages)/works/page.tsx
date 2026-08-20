@@ -13,8 +13,7 @@ const page = () => {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const token =
-				'GITHUB_TOKEN';
+			const token = 'GITHUB_TOKEN';
 			const response = await fetch('https://api.github.com/user/repos', {
 				headers: {
 					Authorization: `token ${token}`,
