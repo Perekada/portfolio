@@ -18,7 +18,7 @@ export default function Home() {
 	const [isClient, setIsClient] = useState(false);
 	const [isMounted, setIsMounted] = useState(false);
 	const curRef = React.useRef(null);
-	const projectList = projects.slice(0, 2);
+	const projectList = projects.filter((project) => project.img).slice(0, 2);
 	useEffect(() => {
 		if (curRef) {
 			setIsMounted(true);
