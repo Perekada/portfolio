@@ -32,7 +32,7 @@ function Footer() {
 						/>
 					</a>
 					<a
-						href='https://drive.google.com/file/d/1IcidbSYAi7caIgGmUtKuL-1iuX29nhdw/view?usp=drivesdk'
+						href='https://drive.google.com/file/d/138_S4msuXsvK6nXYTFJB3yP12NkZneJB/view?usp=sharing'
 						className='h-10 w-10 border-2 rounded-full border-[#477071] flex items-center p-2 justify-center'>
 						<FaGoogleDrive
 							className='h-10 w-10 bg-transparent'
@@ -40,7 +40,7 @@ function Footer() {
 						/>
 					</a>
 					<a
-						href='https://www.linkedin.com/in/joel-kada-191340143'
+						href='https://www.linkedin.com/in/joel-oyinperebo-kada/'
 						className='h-10 w-10 border-2 rounded-full border-[#477071] flex items-center p-2 justify-center'>
 						<FaLinkedin
 							className='h-10 w-10 bg-transparent'

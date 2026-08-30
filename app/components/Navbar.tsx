@@ -1,13 +1,14 @@
 'use client';
-import React, { useState } from 'react';
-import { UilEnvelopes } from '@iconscout/react-unicons';
-import { UilDraggabledots } from '@iconscout/react-unicons';
+import React, { useState, FC } from 'react';
+import { Mail, Menu } from 'lucide-react';
 import { useGlobal } from '../Context';
+import Resume from './Resume';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
-export const Navbar = () => {
-	const { isOpen, openModal, openResume, openPop } = useGlobal();
+export const Navbar: FC = () => {
+	const { isOpen, openModal, openResume, setOpenResume, openPop } = useGlobal();
 	const [active, setActive] = useState('nav__menu');
 	const [toggleIcon, setToggleIcon] = useState('nav__toggler');
 	const navToggle = () => {
@@ -20,13 +21,6 @@ export const Navbar = () => {
 			: setToggleIcon('nav__toggler');
 	};
 
-	// const handleConact = (e) =>{
-	// 	e.preventDefault()
-
-	// 	openModal()
-	// 	return
-	// }
-
 	return (
 		<div>
 			<nav className='fixed top-0 w-[100%] z-[1000] flex h-[8vh] items-center justify-between p-10 bg-[#140152]'>
@@ -34,7 +28,7 @@ export const Navbar = () => {
 					<a
 						href='mailto:joelkada16@gmail.com'
 						className='flex items-center family--font-nunito'>
-						<UilEnvelopes className='mr-[12px]' />
+						<Mail className='mr-[12px]' />
 						joelkada16@gmail.com
 					</a>
 				</div>
@@ -59,14 +53,18 @@ export const Navbar = () => {
 						</Link>
 					</li>
 					<li>
-						<Link
-							href=''
-							onClick={(e) => {
-								e.preventDefault();
-								openPop();
+						<Button
+							className='cursor-pointer text-[#3b595d] no-underline hover:no-underline'
+                            variant='link'
+							onClick={() => {
+								setActive('nav__menu');
+								setOpenResume(true);
 							}}>
 							Resume
-						</Link>
+						</Button>
+					</li>
+					<li style={{ display: 'none' }}>
+						<Resume />
 					</li>
 					<li>
 						<Link
@@ -79,14 +77,13 @@ export const Navbar = () => {
 						<Link href=''>Contact</Link>
 					</li>
 				</ul>
-				{/* {isOpen && (<Contact/>)}
-			{openResume && (<Resume/>)} */}
 				<div
 					onClick={navToggle}
 					className={toggleIcon}>
-					<UilDraggabledots className='icon' />
+					<Menu className='icon' />
 				</div>
 			</nav>
+			<Resume />
 		</div>
 	);
 };
