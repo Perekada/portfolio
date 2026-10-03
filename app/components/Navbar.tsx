@@ -63,9 +63,6 @@ export const Navbar: FC = () => {
 							Resume
 						</Button>
 					</li>
-					<li style={{ display: 'none' }}>
-						<Resume />
-					</li>
 					<li>
 						<Link
 							href='/works'

@@ -33,7 +33,7 @@ const page = () => {
 									height={160}
 								/>
 							) : null}
-							<h3>{project.text}</h3>
+							<h3 className='self-center flex'>{project.text}</h3>
 							{project.description ? <p>{project.description}</p> : null}
 							{liveUrl ? (
 								<p>

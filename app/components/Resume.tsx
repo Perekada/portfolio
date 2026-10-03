@@ -30,7 +30,7 @@ const Resume: FC = () => {
              <HardDrive  className='ml-2 inline' size={18} />
             </button>
           </a>
-          <a href='/Joel_Kada.pdf' download>
+          <a href='/assets/Joel_Kada.pdf' download>
             <button className='resume-btn'>
               Download CV
               <Download className='ml-2 inline' size={18} />
