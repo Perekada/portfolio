@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import image from '@/public/assets/image.jpg';
 import Image from 'next/image';
 import '../App.css';
@@ -10,21 +10,11 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
-import Script from 'next/script';
 
 export default function Home() {
 	// const { openModal } = useGlobal();
 	const { active, setActive } = useGlobal();
-	const [isClient, setIsClient] = useState(false);
-	const [isMounted, setIsMounted] = useState(false);
-	const curRef = React.useRef(null);
 	const projectList = projects.filter((project) => project.img).slice(0, 2);
-	useEffect(() => {
-		if (curRef) {
-			setIsMounted(true);
-		}
-		setIsClient(true);
-	}, []);
 	return (
 		<motion.main
 			initial={{ opacity: 0, scale: 0.9 }}
@@ -32,7 +22,7 @@ export default function Home() {
 			transition={{ duration: 0.5 }}>
 			<div className=' mt-16 flex flex-col items-center'>
 				<div className='grid grid-cols-10 grid-rows-1 gap-4 w-full'>
-					<section className='col-span-8 flex flex-col items-center gap-10 mt-14'>
+					<section className='col-span-1 flex flex-col items-center gap-10 mt-14 lg:col-span-5'>
 						<div className='flex flex-row items-center gap-4'>
 							<section className='img-container'>
 								<Image
@@ -105,23 +95,38 @@ export default function Home() {
 						</div>
 					</section>
 
-					<section className='col-span-2 gap-4'>
-						{isClient && (
-							<>
-								<div
-									className='badge-base LI-profile-badge'
-									data-locale='en_US'
-									data-size='medium'
-									data-theme='light'
-									data-type='VERTICAL'
-									data-vanity='joel-oyinperebo-kada'
-									data-version='v1'></div>
-								<Script
-									src='https://platform.linkedin.com/badges/js/profile.js'
-									strategy='lazyOnload'
+					<section className='col-span-4 flex justify-center gap-1 lg:col-span-4 lg:justify-start h-fit'>
+						<article className='w-full max-w-[400px] overflow-hidden rounded-[14px] border border-[#d8d8d8] bg-white hover:bg-[#e5e5e5] font-sans text-[#191919] shadow-[0_1px_2px_rgba(0,0,0,0.08)] transition-colors duration-300'>
+	<div className="flex items-center gap-2 bg-[#0077b5] text-white font-sans font-bold text-base px-6 py-2 transition-colors duration-300 select-none">
+        <svg 
+        //   xmlns="http://w3.org" 
+          viewBox="0 0 24 24" 
+          className="w-5 h-5 fill-current"
+        >
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        <span>LinkedIn</span>
+      </div>
+							<div className='flex flex-col items-center px-3 py-1 text-center'>
+								<Image
+									src='/linkedin_profile.png'
+									alt='Joel Oyinperebo Kada'
+									width={55}
+									height={55}
+									className='mb-1 rounded-full object-cover flex self-center'
 								/>
-							</>
-						)}
+								<h2 className='m-0 text-[14px] font-semibold leading-tight text-black'>Joel Oyinperebo Kada</h2>
+								<p className='mb-0.5 mt-0.5 text-[13px] leading-tight text-black'>Software Engineer, Full stack Developer</p>
+								<p className='m-0 text-[13px] leading-tight text-[#0a66c2]'>University of Benin</p>
+								<a
+									href='https://www.linkedin.com/in/joel-oyinperebo-kada/'
+									target='_blank'
+									rel='noreferrer'
+									className='mt-1 inline-flex min-h-[27px] items-center justify-center rounded-full border-2 border-[#0a66c2] px-[16px] text-[16px] font-semibold leading-none text-[#0a66c2] transition-colors hover:bg-[#e8f3ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0a66c2]'>
+									View profile
+								</a>
+							</div>
+						</article>
 					</section>
 				</div>
 
